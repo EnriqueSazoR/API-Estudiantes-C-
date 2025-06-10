@@ -1,0 +1,6 @@
+@APIEstudiantes_HostAddress = http://localhost:5289
+
+GET {{APIEstudiantes_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

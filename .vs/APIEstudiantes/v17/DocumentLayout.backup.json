@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|c:\\users\\luis sazo\\desktop\\apiestudiantes\\apiestudiantes\\models\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|solutionrelative:apiestudiantes\\models\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|c:\\users\\luis sazo\\desktop\\apiestudiantes\\apiestudiantes\\controllers\\cursoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|solutionrelative:apiestudiantes\\controllers\\cursoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|c:\\users\\luis sazo\\desktop\\apiestudiantes\\apiestudiantes\\models\\estudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|solutionrelative:apiestudiantes\\models\\estudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|c:\\users\\luis sazo\\desktop\\apiestudiantes\\apiestudiantes\\controllers\\estudiantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|solutionrelative:apiestudiantes\\controllers\\estudiantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Estudiante.cs",
+              "DocumentMoniker": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Models\\Estudiante.cs",
+              "RelativeDocumentMoniker": "APIEstudiantes\\Models\\Estudiante.cs",
+              "ToolTip": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Models\\Estudiante.cs",
+              "RelativeToolTip": "APIEstudiantes\\Models\\Estudiante.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAADwvxMAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T05:22:00.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Curso.cs",
+              "DocumentMoniker": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Models\\Curso.cs",
+              "RelativeDocumentMoniker": "APIEstudiantes\\Models\\Curso.cs",
+              "ToolTip": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Models\\Curso.cs",
+              "RelativeToolTip": "APIEstudiantes\\Models\\Curso.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T04:59:38.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EstudiantesController.cs",
+              "DocumentMoniker": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Controllers\\EstudiantesController.cs",
+              "RelativeDocumentMoniker": "APIEstudiantes\\Controllers\\EstudiantesController.cs",
+              "ToolTip": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Controllers\\EstudiantesController.cs",
+              "RelativeToolTip": "APIEstudiantes\\Controllers\\EstudiantesController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T04:31:26.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CursosController.cs",
+              "DocumentMoniker": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Controllers\\CursosController.cs",
+              "RelativeDocumentMoniker": "APIEstudiantes\\Controllers\\CursosController.cs",
+              "ToolTip": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Controllers\\CursosController.cs",
+              "RelativeToolTip": "APIEstudiantes\\Controllers\\CursosController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAACEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T04:30:49.126Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
