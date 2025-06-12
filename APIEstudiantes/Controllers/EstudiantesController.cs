@@ -1,4 +1,5 @@
 ﻿using APIEstudiantes.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace APIEstudiantes.Controllers
@@ -17,6 +18,7 @@ namespace APIEstudiantes.Controllers
         // Endpoints
 
         //POST
+        [Authorize]
         [HttpPost]
         public ActionResult<Estudiante> PostEstudiante([FromBody] Estudiante estudiante)
         {
@@ -32,6 +34,7 @@ namespace APIEstudiantes.Controllers
         }
 
         //GETALL
+        [Authorize]
         [HttpGet]
         public ActionResult<List<Estudiante>> GetEstudiantes()
         {

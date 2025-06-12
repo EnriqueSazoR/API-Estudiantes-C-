@@ -13,5 +13,6 @@ namespace APIEstudiantes
         // Colocar todos los modelos
         public DbSet<Curso> Curso {  get; set; }
         public DbSet<Estudiante> Estudiante {  get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
     }
 }

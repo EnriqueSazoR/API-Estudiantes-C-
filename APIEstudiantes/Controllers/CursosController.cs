@@ -1,4 +1,5 @@
 ﻿using APIEstudiantes.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,6 +20,7 @@ namespace APIEstudiantes.Controllers
         // Endpoints
 
         // POST
+        [Authorize]
         [HttpPost]
         public ActionResult<Curso> PostCurso(Curso curso)
         {
@@ -56,6 +58,7 @@ namespace APIEstudiantes.Controllers
         }
 
         // PUT
+        [Authorize]
         [HttpPut("{id}")]
         public ActionResult<Curso> PutCurso(int id, Curso curso)
         {
@@ -72,6 +75,7 @@ namespace APIEstudiantes.Controllers
 
 
         // DELETE
+        [Authorize]
         [HttpDelete("{id}")]
         public ActionResult<Curso> DeleteCurso(int id)
         {
