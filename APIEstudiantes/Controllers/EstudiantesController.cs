@@ -1,4 +1,6 @@
 ﻿using APIEstudiantes.Models;
+using APIEstudiantes.Repository.IRepository;
+using APIEstudiantes.Services.IServices;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,11 +10,14 @@ namespace APIEstudiantes.Controllers
     [ApiController]
     public class EstudiantesController : Controller
     {
-        private readonly ApplicationDBContext _db;
+        private readonly IEstudianteRepository _estudianteRepository;
+        private readonly IEstudianteService _estudianteService;
 
-        public EstudiantesController(ApplicationDBContext db)
+        public EstudiantesController(IEstudianteRepository estudianteRepository, 
+            IEstudianteService estudianteService)
         {
-            _db = db;
+            _estudianteRepository = estudianteRepository;
+            _estudianteService = estudianteService;
         }
 
         // Endpoints
@@ -20,26 +25,26 @@ namespace APIEstudiantes.Controllers
         //POST
         [Authorize]
         [HttpPost]
-        public ActionResult<Estudiante> PostEstudiante([FromBody] Estudiante estudiante)
+        public async Task<ActionResult<Estudiante>> PostEstudiante([FromBody] Estudiante estudiante)
         {
-            if (estudiante == null || string.IsNullOrEmpty(estudiante.Nombre) || estudiante.Calificacion < 0 || estudiante.Calificacion > 10)
+            try
             {
-                return BadRequest("Datos inválidos");
+                var nuevoEstudiante = await _estudianteService.AddValidationAsync(estudiante);
+                return Ok(nuevoEstudiante);
             }
-            _db.Add(estudiante);
-            _db.SaveChanges();
-            //estudiantes.Add(estudiante);
+            catch (Exception ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
 
-            return Ok(estudiante);
         }
 
         //GETALL
-        [Authorize]
         [HttpGet]
-        public ActionResult<List<Estudiante>> GetEstudiantes()
+        public async Task<ActionResult<List<Estudiante>>> GetEstudiantes()
         {
-            var estudiantes = _db.Estudiante.ToList();
-            if (estudiantes == null || estudiantes.Count == 0)
+            var estudiantes = await _estudianteRepository.GetAllAsync();
+            if (estudiantes == null)
             {
                 return BadRequest("No hay datos");
             }
@@ -49,9 +54,9 @@ namespace APIEstudiantes.Controllers
 
         //GET(ID)
         [HttpGet("{id}")]
-        public ActionResult<Estudiante> GetEstudiante(int id)
+        public async Task<ActionResult<Estudiante>> GetEstudiante(int id)
         {
-            var estudianteBuscado = _db.Estudiante.FirstOrDefault(x => x.Id == id);
+            var estudianteBuscado = await _estudianteRepository.GetByIdAsync(id);
             if (estudianteBuscado == null)
             {
                 return NotFound();
@@ -60,34 +65,33 @@ namespace APIEstudiantes.Controllers
         }
 
         //PUT(ID)
+        [Authorize]
         [HttpPut("{id}")]
-        public ActionResult<Estudiante> PutEstudiante(int id, Estudiante estudiante)
+        public async Task<ActionResult> PutEstudiante(int id, Estudiante estudiante)
         {
-            var estudianteModificado = _db.Estudiante.FirstOrDefault(e => e.Id == id);
-            if (estudianteModificado == null)
+            var estudianteEncontrado = await _estudianteRepository.GetByIdAsync(id);
+            if (estudianteEncontrado == null)
             {
                 return NotFound();
             }
-            estudianteModificado.Nombre = estudiante.Nombre;
-            estudianteModificado.Calificacion = estudiante.Calificacion;
-            _db.SaveChanges();
 
-            return Ok(estudianteModificado);
+            // Actualizar campos
+            estudianteEncontrado.Nombre = estudiante.Nombre;
+            estudianteEncontrado.Calificacion = estudiante.Calificacion;
+            await _estudianteRepository.UpdateAsync(estudianteEncontrado);
+            return Ok(estudianteEncontrado);
 
         }
 
         //DELETE(ID)
-        [HttpDelete("id")]
-        public ActionResult<Estudiante> DeleteEstudiante(int id)
+        [Authorize]
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteEstudiante(int id)
         {
-            var estudianteEliminado = _db.Estudiante.FirstOrDefault(e => e.Id == id);
-            if (estudianteEliminado == null)
-            {
-                return NotFound();
-            }
-            _db.Estudiante.Remove(estudianteEliminado);
-            _db.SaveChanges();
-            return Ok();
+            var estudiante = await _estudianteRepository.GetByIdAsync(id);
+            if (estudiante == null) return NotFound();
+            await _estudianteRepository.DeleteAsync(id);
+            return Ok(estudiante);
 
         }
     }

@@ -1,11 +1,21 @@
 using APIEstudiantes;
+using APIEstudiantes.Repository;
+using APIEstudiantes.Repository.IRepository;
+using APIEstudiantes.Services;
+using APIEstudiantes.Services.IServices;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Servicios
+builder.Services.AddScoped<IEstudianteService, EstudianteService>();
+builder.Services.AddScoped<IEstudianteRepository, EstudianteRepository>();
+builder.Services.AddScoped<ICursoRepository, CursoRepository>();
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("ConexionSql") ?? throw new InvalidOperationException("Connection string 'ConexionSql' not found.");

@@ -79,24 +79,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Curso"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Curso"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Curso"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       },
@@ -212,24 +195,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Curso"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Curso"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Curso"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       },
@@ -250,21 +216,42 @@
         ],
         "responses": {
           "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Cursos/reporte": {
+      "get": {
+        "tags": [
+          "Cursos"
+        ],
+        "responses": {
+          "200": {
             "description": "OK",
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Curso"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReporteCursoDto"
+                  }
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Curso"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReporteCursoDto"
+                  }
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Curso"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReporteCursoDto"
+                  }
                 }
               }
             }
@@ -431,29 +418,10 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Estudiante"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Estudiante"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Estudiante"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
-      }
-    },
-    "/api/Estudiantes/id": {
+      },
       "delete": {
         "tags": [
           "Estudiantes"
@@ -461,7 +429,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -470,24 +439,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Estudiante"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Estudiante"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Estudiante"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -539,6 +491,20 @@
             "format": "double"
           },
           "cursoId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReporteCursoDto": {
+        "type": "object",
+        "properties": {
+          "nombreCurso": {
+            "type": "string",
+            "nullable": true
+          },
+          "cantidadAlumnos": {
             "type": "integer",
             "format": "int32"
           }

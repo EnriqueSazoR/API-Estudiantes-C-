@@ -1,7 +1,11 @@
 ﻿using APIEstudiantes.Models;
+using APIEstudiantes.Repository;
+using APIEstudiantes.Repository.IRepository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Validations;
+using System.Linq;
 
 namespace APIEstudiantes.Controllers
 {
@@ -9,12 +13,13 @@ namespace APIEstudiantes.Controllers
     [ApiController]
     public class CursosController : Controller
     {
+        private readonly ICursoRepository _cursoRepository;
         private readonly ApplicationDBContext _db;
 
-        public CursosController(ApplicationDBContext db)
+        public CursosController(ICursoRepository cursoRepository, ApplicationDBContext db)
         {
+            _cursoRepository = cursoRepository;
             _db = db;
-
         }
 
         // Endpoints
@@ -22,22 +27,21 @@ namespace APIEstudiantes.Controllers
         // POST
         [Authorize]
         [HttpPost]
-        public ActionResult<Curso> PostCurso(Curso curso)
+        public async Task<ActionResult> PostCurso([FromBody] Curso curso)
         {
             if(curso == null || string.IsNullOrEmpty(curso.NombreCurso))
             {
-                return BadRequest("El campo nombre curso es inválido");
+                return BadRequest("Datos Inválidos");
             }
-            _db.Add(curso);
-            _db.SaveChanges();
+            await _cursoRepository.AddAsync(curso);
             return Ok(curso);
         }
 
         // GET (ALL)
         [HttpGet]
-        public ActionResult<List<Curso>> GetCursos()
+        public async Task<ActionResult<List<Curso>>> GetCursos()
         {
-            var cursos = _db.Curso.Include(x => x.Estudiante).ToList();
+            var cursos = await _cursoRepository.GetAllAsync();
             if (cursos.Count == 0)
             {
                 return BadRequest("No hay registros en la bd");
@@ -47,9 +51,9 @@ namespace APIEstudiantes.Controllers
 
         // GET (ID)
         [HttpGet("{id}")]
-        public ActionResult<Curso> GetCurso(int id)
+        public async Task<ActionResult<Curso>> GetCurso(int id)
         {
-            var cursoEncontrado = _db.Curso.FirstOrDefault(x => x.Id == id);
+            var cursoEncontrado = await _cursoRepository.GetByIdAsync(id);
             if (cursoEncontrado == null)
             {
                 return NotFound();
@@ -57,36 +61,59 @@ namespace APIEstudiantes.Controllers
             return Ok(cursoEncontrado);
         }
 
+        // GET (para extraer a todos los alumnos asignados a un curos)
+        [HttpGet("reporte")]
+        public ActionResult<List<ReporteCursoDto>> GetReporte()
+        {
+            var reporte = _db.Curso
+                .Select(c => new
+                {
+                    NombreCurso = c.NombreCurso,
+                    CantidadEstudiantes = c.Estudiante.Count()
+                })
+                .ToList();
+
+            var resultado = reporte.Select(r => new ReporteCursoDto
+            {
+                NombreCurso = r.NombreCurso,
+                CantidadAlumnos = r.CantidadEstudiantes
+            })
+            .ToList();
+
+            return Ok(resultado);
+        }
+
         // PUT
         [Authorize]
         [HttpPut("{id}")]
-        public ActionResult<Curso> PutCurso(int id, Curso curso)
+        public async Task<ActionResult> PutCurso(int id, Curso curso)
         {
-            var cursoModificado = _db.Curso.FirstOrDefault(x => x.Id == id);
-            if (cursoModificado == null)
-            {
-                return NotFound();
-            }
-            cursoModificado.NombreCurso = curso.NombreCurso;
-            _db.SaveChanges();
+            var cursoEncontrado = await _cursoRepository.GetByIdAsync(id);
+            if (cursoEncontrado == null) return NotFound();
 
-            return Ok(cursoModificado);
+            //Actualizar campos
+            cursoEncontrado.NombreCurso = curso.NombreCurso;
+            await _cursoRepository.UpdateAsync(cursoEncontrado);
+            return Ok(cursoEncontrado);
         }
 
 
         // DELETE
         [Authorize]
         [HttpDelete("{id}")]
-        public ActionResult<Curso> DeleteCurso(int id)
+        public async Task<ActionResult> DeleteCurso(int id)
         {
-            var cursoEliminado = _db.Curso.FirstOrDefault(el => el.Id == id);
-            if (cursoEliminado == null)
-            {
-                return NotFound();
-            }
-            _db.Curso.Remove(cursoEliminado);
-            _db.SaveChanges();
-            return Ok("Curso eliminado de la base de datos");
+            var curso = await _cursoRepository.GetByIdAsync(id);
+            if (curso == null) return NotFound();
+            await _cursoRepository.DeleteAsync(id);
+            return Ok(curso);
+        }
+
+        // clase DTO para generar el reporte
+        public class ReporteCursoDto
+        {
+            public string NombreCurso { get; set; } = null!;
+            public int CantidadAlumnos { get; set; }
         }
     }
 }

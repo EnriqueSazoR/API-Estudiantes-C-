@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|c:\\users\\luis sazo\\desktop\\apiestudiantes\\apiestudiantes\\controllers\\cursoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|solutionrelative:apiestudiantes\\controllers\\cursoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|c:\\users\\luis sazo\\desktop\\apiestudiantes\\apiestudiantes\\repository\\estudianterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|solutionrelative:apiestudiantes\\repository\\estudianterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|c:\\users\\luis sazo\\desktop\\apiestudiantes\\apiestudiantes\\controllers\\estudiantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,12 +15,20 @@
       "RelativeMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|solutionrelative:apiestudiantes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|c:\\users\\luis sazo\\desktop\\apiestudiantes\\apiestudiantes\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|solutionrelative:apiestudiantes\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|c:\\users\\luis sazo\\desktop\\apiestudiantes\\apiestudiantes\\services\\estudianteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|solutionrelative:apiestudiantes\\services\\estudianteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|c:\\users\\luis sazo\\desktop\\apiestudiantes\\apiestudiantes\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|solutionrelative:apiestudiantes\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|c:\\users\\luis sazo\\desktop\\apiestudiantes\\apiestudiantes\\repository\\irepository\\iestudianterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|solutionrelative:apiestudiantes\\repository\\irepository\\iestudianterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|c:\\users\\luis sazo\\desktop\\apiestudiantes\\apiestudiantes\\services\\iservices\\iestudianteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|solutionrelative:apiestudiantes\\services\\iservices\\iestudianteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|c:\\users\\luis sazo\\desktop\\apiestudiantes\\apiestudiantes\\controllers\\cursoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDC3823-06FF-4F3C-89DE-FE49505AF7DA}|APIEstudiantes\\APIEstudiantes.csproj|solutionrelative:apiestudiantes\\controllers\\cursoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,14 +43,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CursosController.cs",
-              "DocumentMoniker": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Controllers\\CursosController.cs",
-              "RelativeDocumentMoniker": "APIEstudiantes\\Controllers\\CursosController.cs",
-              "ToolTip": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Controllers\\CursosController.cs",
-              "RelativeToolTip": "APIEstudiantes\\Controllers\\CursosController.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAAAE0AAAASAAAAAAAAAA==",
+              "Title": "EstudianteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Repository\\EstudianteRepository.cs",
+              "RelativeDocumentMoniker": "APIEstudiantes\\Repository\\EstudianteRepository.cs",
+              "ToolTip": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Repository\\EstudianteRepository.cs",
+              "RelativeToolTip": "APIEstudiantes\\Repository\\EstudianteRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBMAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T01:19:20.537Z",
+              "WhenOpened": "2025-06-19T01:43:55.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IEstudianteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Repository\\IRepository\\IEstudianteRepository.cs",
+              "RelativeDocumentMoniker": "APIEstudiantes\\Repository\\IRepository\\IEstudianteRepository.cs",
+              "ToolTip": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Repository\\IRepository\\IEstudianteRepository.cs",
+              "RelativeToolTip": "APIEstudiantes\\Repository\\IRepository\\IEstudianteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T01:43:37.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EstudianteService.cs",
+              "DocumentMoniker": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Services\\EstudianteService.cs",
+              "RelativeDocumentMoniker": "APIEstudiantes\\Services\\EstudianteService.cs",
+              "ToolTip": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Services\\EstudianteService.cs",
+              "RelativeToolTip": "APIEstudiantes\\Services\\EstudianteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T01:35:37.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IEstudianteService.cs",
+              "DocumentMoniker": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Services\\IServices\\IEstudianteService.cs",
+              "RelativeDocumentMoniker": "APIEstudiantes\\Services\\IServices\\IEstudianteService.cs",
+              "ToolTip": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Services\\IServices\\IEstudianteService.cs",
+              "RelativeToolTip": "APIEstudiantes\\Services\\IServices\\IEstudianteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T01:33:39.293Z",
               "EditorCaption": ""
             },
             {
@@ -53,9 +100,22 @@
               "RelativeDocumentMoniker": "APIEstudiantes\\Controllers\\EstudiantesController.cs",
               "ToolTip": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Controllers\\EstudiantesController.cs",
               "RelativeToolTip": "APIEstudiantes\\Controllers\\EstudiantesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T01:13:37.386Z",
+              "WhenOpened": "2025-06-19T00:52:51.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CursosController.cs",
+              "DocumentMoniker": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Controllers\\CursosController.cs",
+              "RelativeDocumentMoniker": "APIEstudiantes\\Controllers\\CursosController.cs",
+              "ToolTip": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Controllers\\CursosController.cs",
+              "RelativeToolTip": "APIEstudiantes\\Controllers\\CursosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T00:52:01.738Z",
               "EditorCaption": ""
             },
             {
@@ -66,35 +126,9 @@
               "RelativeDocumentMoniker": "APIEstudiantes\\Program.cs",
               "ToolTip": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Program.cs",
               "RelativeToolTip": "APIEstudiantes\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T01:01:08.032Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\appsettings.json",
-              "RelativeDocumentMoniker": "APIEstudiantes\\appsettings.json",
-              "ToolTip": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\appsettings.json",
-              "RelativeToolTip": "APIEstudiantes\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-12T00:47:04.371Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "APIEstudiantes\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\Luis Sazo\\Desktop\\APIEstudiantes\\APIEstudiantes\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "APIEstudiantes\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T00:36:27.949Z",
+              "WhenOpened": "2025-06-19T00:03:11.327Z",
               "EditorCaption": ""
             }
           ]
