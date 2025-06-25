@@ -25,7 +25,7 @@ namespace APIEstudiantes.Controllers
         // Endpoints
 
         // POST
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ActionResult> PostCurso([FromBody] Curso curso)
         {
@@ -63,28 +63,23 @@ namespace APIEstudiantes.Controllers
 
         // GET (para extraer a todos los alumnos asignados a un curos)
         [HttpGet("reporte")]
-        public ActionResult<List<ReporteCursoDto>> GetReporte()
+        public async Task<IActionResult> ReporteCursos()
         {
-            var reporte = _db.Curso
+            var reporte = await _db.Curso
+                .Include(c => c.Estudiante)
                 .Select(c => new
                 {
+                    CursoId = c.Id,
                     NombreCurso = c.NombreCurso,
-                    CantidadEstudiantes = c.Estudiante.Count()
+                    TotalEstudiantes = c.Estudiante.Count
                 })
-                .ToList();
+                .ToListAsync();
 
-            var resultado = reporte.Select(r => new ReporteCursoDto
-            {
-                NombreCurso = r.NombreCurso,
-                CantidadAlumnos = r.CantidadEstudiantes
-            })
-            .ToList();
-
-            return Ok(resultado);
+            return Ok(reporte);
         }
 
         // PUT
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<ActionResult> PutCurso(int id, Curso curso)
         {
@@ -99,7 +94,7 @@ namespace APIEstudiantes.Controllers
 
 
         // DELETE
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteCurso(int id)
         {

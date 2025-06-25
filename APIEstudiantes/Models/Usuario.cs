@@ -11,6 +11,8 @@ namespace APIEstudiantes.Models
         public string NombreUsuario { get; set; } = null!;
         [MinLength(8, ErrorMessage = "La Contraseña debe tener al menos 8 caracteres")]
         public string Clave { get; set; } = null!;
+        [Required(ErrorMessage = "El rol es obligatorio")]
+        public string Rol { get; set; } = null!;
 
     }
 }

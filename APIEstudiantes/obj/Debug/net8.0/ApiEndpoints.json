@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "APIEstudiantes.Controllers.AuthController",
+    "Method": "postUsuario",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "APIEstudiantes.Controllers.UsuarioLoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIEstudiantes.Controllers.AuthController",
+    "Method": "PostUsuario",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "APIEstudiantes.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "APIEstudiantes.Controllers.CursosController",
     "Method": "PostCurso",
     "RelativePath": "api/Cursos",
@@ -100,23 +132,13 @@
   },
   {
     "ContainingType": "APIEstudiantes.Controllers.CursosController",
-    "Method": "GetReporte",
+    "Method": "ReporteCursos",
     "RelativePath": "api/Cursos/reporte",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[APIEstudiantes.Controllers.CursosController\u002BReporteCursoDto, APIEstudiantes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "APIEstudiantes.Controllers.EstudiantesController",
@@ -226,31 +248,5 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "APIEstudiantes.Controllers.AuthController",
-    "Method": "postUsuario",
-    "RelativePath": "apiAuth/login",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "login",
-        "Type": "APIEstudiantes.Controllers.UsuarioLoginDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "APIEstudiantes.Models.Usuario",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
   }
 ]

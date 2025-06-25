@@ -23,7 +23,7 @@ namespace APIEstudiantes.Controllers
         // Endpoints
 
         //POST
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ActionResult<Estudiante>> PostEstudiante([FromBody] Estudiante estudiante)
         {
@@ -65,7 +65,7 @@ namespace APIEstudiantes.Controllers
         }
 
         //PUT(ID)
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<ActionResult> PutEstudiante(int id, Estudiante estudiante)
         {
@@ -84,7 +84,7 @@ namespace APIEstudiantes.Controllers
         }
 
         //DELETE(ID)
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteEstudiante(int id)
         {
