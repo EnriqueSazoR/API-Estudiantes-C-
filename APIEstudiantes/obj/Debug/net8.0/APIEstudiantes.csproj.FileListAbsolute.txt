@@ -131,7 +131,6 @@ C:\Users\Luis Sazo\Desktop\APIEstudiantes\APIEstudiantes\obj\Debug\net8.0\static
 C:\Users\Luis Sazo\Desktop\APIEstudiantes\APIEstudiantes\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.APIEstudiantes.props
 C:\Users\Luis Sazo\Desktop\APIEstudiantes\APIEstudiantes\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.APIEstudiantes.props
 C:\Users\Luis Sazo\Desktop\APIEstudiantes\APIEstudiantes\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\Luis Sazo\Desktop\APIEstudiantes\APIEstudiantes\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Luis Sazo\Desktop\APIEstudiantes\APIEstudiantes\obj\Debug\net8.0\APIEstud.4FAF5347.Up2Date
 C:\Users\Luis Sazo\Desktop\APIEstudiantes\APIEstudiantes\obj\Debug\net8.0\APIEstudiantes.dll
 C:\Users\Luis Sazo\Desktop\APIEstudiantes\APIEstudiantes\obj\Debug\net8.0\refint\APIEstudiantes.dll

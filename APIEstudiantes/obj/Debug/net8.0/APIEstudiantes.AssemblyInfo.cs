@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APIEstudiantes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24a1c199ba8ebb40b7f396814ef06020b9ed2c48")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d92167532d8a89fb4390937461bf5e65a67ed56")]
 [assembly: System.Reflection.AssemblyProductAttribute("APIEstudiantes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APIEstudiantes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

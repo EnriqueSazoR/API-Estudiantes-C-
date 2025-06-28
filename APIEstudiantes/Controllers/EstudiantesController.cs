@@ -1,5 +1,6 @@
 ﻿using APIEstudiantes.Models;
 using APIEstudiantes.Repository.IRepository;
+using APIEstudiantes.Services;
 using APIEstudiantes.Services.IServices;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -12,7 +13,7 @@ namespace APIEstudiantes.Controllers
     {
         private readonly IEstudianteRepository _estudianteRepository;
         private readonly IEstudianteService _estudianteService;
-
+     
         public EstudiantesController(IEstudianteRepository estudianteRepository, 
             IEstudianteService estudianteService)
         {
